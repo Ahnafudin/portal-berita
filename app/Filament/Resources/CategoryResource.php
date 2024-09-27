@@ -26,6 +26,7 @@ class CategoryResource extends Resource
         return $form
             ->schema([
                 // schema form
+
                 Forms\Components\TextInput::make('name')
                 ->required()
                 // ->afterStateUpdated(fn(Set $set, ?String $state) => $set('slug', Str::slug($state)))
@@ -47,6 +48,7 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 // munculkan data table category
+
                 Tables\Columns\TextColumn::make('name')->searchable(),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\ImageColumn::make('icon'),
