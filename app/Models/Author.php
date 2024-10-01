@@ -23,7 +23,7 @@ class Author extends Model
         $this->attributes['slug'] = Str::slug($value);
     }
 
-    public function articles(): HasMany
+    public function news(): HasMany
     {
         return $this->hasMany(ArticleNews::class);
     }
